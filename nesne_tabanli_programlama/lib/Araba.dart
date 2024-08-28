@@ -1,33 +1,8 @@
-class Araba{
+import 'package:null_safety_kullanimi/Arac.dart';
 
-  late String renk;
-  late int hiz;
-  late bool calisiyor_mu;
+class Araba extends Arac{
 
-  void Calistir(){
-    calisiyor_mu = true;
-    hiz = 5;
-  }
+  late String kasaTipi;
 
-  void Durdur(){
-    calisiyor_mu = false;
-    hiz = 0;
-  }
-
-  void hizlan(int kacKm){
-    hiz += kacKm;
-  }
-
-  void yavasla(int kacKm){
-    hiz -= kacKm;
-  }
-
-
-  void BilgiAl(){
-
-    print("Arabanın rengi : $renk");
-    print("Arabanın hızı : $hiz");
-    print("Araba çalışıyor mu ? : $calisiyor_mu");
-
-  }
+  Araba(this.kasaTipi , String renk , String vites) : super(renk , vites);
 }
